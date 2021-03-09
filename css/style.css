@@ -1,0 +1,35 @@
+/*
+COLORS:
+
+Light orange: #FFCDA5
+Medium orange: #FFB85A
+Dark orange: #FF6516
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh; /* vieport is a visible area of webpage*/
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(27, 100%, 82%, 0.712),
+      hsla(20, 100%, 54%, 0.712)
+    ),
+    url(../img/background-image.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+}

@@ -1,9 +1,9 @@
 /*
 COLORS:
 
-Light orange: #FFCDA5
-Medium orange: #FFB85A
-Dark orange: #FF6516
+Light color: #FBEB62
+Medium color: #FBCA47
+Dark color: #F69F22
 */
 
 * {
@@ -24,9 +24,9 @@ body {
 .header {
   height: 95vh; /* vieport is a visible area of webpage*/
   background-image: linear-gradient(
-      to right bottom,
-      hsla(27, 100%, 82%, 0.8),
-      hsla(20, 100%, 54%, 0.8)
+      to top,
+      hsla(54, 95%, 68%, 0.8),
+      hsla(35, 92%, 55%, 0.8)
     ),
     url(../img/background-image.jpg);
   background-size: cover;
@@ -42,7 +42,7 @@ body {
 }
 
 .logo {
-  height: 100px;
+  height: 80px;
 }
 
 .text-box {
@@ -68,5 +68,5 @@ body {
   display: block;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 11.6px;
+  letter-spacing: 6px;
 }

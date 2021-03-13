@@ -1,0 +1,22 @@
+{
+  "name": "journer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dim4ik2911/journer.git"
+  },
+  "author": "Dmitrijs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dim4ik2911/journer/issues"
+  },
+  "homepage": "https://github.com/dim4ik2911/journer#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

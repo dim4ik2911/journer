@@ -32,8 +32,8 @@
   padding: 15rem 0;
   background-image: linear-gradient(
     to bottom,
-    $color-primary-light,
-    $color-primary-dark
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)
   );
 }
 

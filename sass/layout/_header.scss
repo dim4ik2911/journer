@@ -20,11 +20,6 @@
 
   &__logo {
     height: 8rem;
-    transition: all 0.2s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &__text-box {

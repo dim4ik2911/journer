@@ -10,6 +10,20 @@
 
 .section-features {
   padding: 20rem 0;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba($color-primary-light, 0.8)),
+      to(rgba($color-primary-dark, 0.8))
+    ),
+    url(../img/nat-4.jpg);
+  background-image: -o-linear-gradient(
+      top,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
   background-image: linear-gradient(
       to bottom,
       rgba($color-primary-light, 0.8),
@@ -18,6 +32,7 @@
     url(../img/nat-4.jpg);
   background-size: cover;
   margin-top: -11rem;
+  -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0 100%);
   clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0 100%);
 
   @include respond(tab-port) {
@@ -46,6 +61,18 @@
 
 .section-book {
   padding: 15rem 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba($color-primary-light, 0.8)),
+    to(rgba($color-primary-dark, 0.8))
+  );
+  background-image: -o-linear-gradient(
+    top,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)
+  );
   background-image: linear-gradient(
     to bottom,
     rgba($color-primary-light, 0.8),
@@ -58,6 +85,13 @@
 }
 
 .book {
+  background-image: -o-linear-gradient(
+      345deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
   background-image: linear-gradient(
       105deg,
       rgba($color-white, 0.9) 0%,
@@ -67,9 +101,17 @@
     url(../img/nat-10.jpg);
   background-size: cover;
   border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
   @include respond(tab-land) {
+    background-image: -o-linear-gradient(
+        345deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10.jpg);
     background-image: linear-gradient(
         105deg,
         rgba($color-white, 0.9) 0%,
@@ -81,6 +123,20 @@
   }
 
   @include respond(tab-port) {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(rgba($color-white, 0.9)),
+        to(rgba($color-white, 0.9))
+      ),
+      url(../img/nat-10.jpg);
+    background-image: -o-linear-gradient(
+        left,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10.jpg);
     background-image: linear-gradient(
         to right,
         rgba($color-white, 0.9) 0%,

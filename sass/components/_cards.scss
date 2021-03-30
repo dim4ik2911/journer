@@ -1,20 +1,23 @@
 .cards {
-  //Functionality
+  -webkit-perspective: 150rem;
   perspective: 150rem;
-  -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
 
   &__side {
     height: 52rem;
+    -webkit-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
@@ -22,9 +25,22 @@
     }
 
     &--back {
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
 
       &-1 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-secondary-light),
+          to($color-secondary-dark)
+        );
+        background-image: -o-linear-gradient(
+          left top,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
         background-image: linear-gradient(
           to right bottom,
           $color-secondary-light,
@@ -32,6 +48,18 @@
         );
       }
       &-2 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-primary-light),
+          to($color-primary-dark)
+        );
+        background-image: -o-linear-gradient(
+          left top,
+          $color-primary-light,
+          $color-primary-dark
+        );
         background-image: linear-gradient(
           to right bottom,
           $color-primary-light,
@@ -39,6 +67,18 @@
         );
       }
       &-3 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-tertiary-light),
+          to($color-tertiary-dark)
+        );
+        background-image: -o-linear-gradient(
+          left top,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
         background-image: linear-gradient(
           to right bottom,
           $color-tertiary-light,
@@ -49,10 +89,12 @@
   }
 
   &:hover &__side--front {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
+    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
 
@@ -65,6 +107,20 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     &--1 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-secondary-light),
+          to($color-secondary-dark)
+        ),
+        url(../img/nat-5.jpg);
+      background-image: -o-linear-gradient(
+          left top,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
       background-image: linear-gradient(
           to right bottom,
           $color-secondary-light,
@@ -73,6 +129,20 @@
         url(../img/nat-5.jpg);
     }
     &--2 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-primary-light),
+          to($color-primary-dark)
+        ),
+        url(../img/nat-6.jpg);
+      background-image: -o-linear-gradient(
+          left top,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-6.jpg);
       background-image: linear-gradient(
           to right bottom,
           $color-primary-light,
@@ -81,6 +151,20 @@
         url(../img/nat-6.jpg);
     }
     &--3 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($color-tertiary-light),
+          to($color-tertiary-dark)
+        ),
+        url(../img/nat-7.jpg);
+      background-image: -o-linear-gradient(
+          left top,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-7.jpg);
       background-image: linear-gradient(
           to right bottom,
           $color-tertiary-light,
@@ -107,6 +191,18 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     &--1 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba($color-secondary-light, 0.85)),
+        to(rgba($color-secondary-dark, 0.85))
+      );
+      background-image: -o-linear-gradient(
+        left top,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
       background-image: linear-gradient(
         to right bottom,
         rgba($color-secondary-light, 0.85),
@@ -114,6 +210,18 @@
       );
     }
     &--2 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba($color-primary-light, 0.85)),
+        to(rgba($color-primary-dark, 0.85))
+      );
+      background-image: -o-linear-gradient(
+        left top,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
       background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.85),
@@ -121,6 +229,18 @@
       );
     }
     &--3 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba($color-tertiary-light, 0.85)),
+        to(rgba($color-tertiary-dark, 0.85))
+      );
+      background-image: -o-linear-gradient(
+        left top,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
       background-image: linear-gradient(
         to right bottom,
         rgba($color-tertiary-light, 0.85),
@@ -153,6 +273,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 90%;
     text-align: center;
@@ -173,24 +295,33 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  //@include respond(tab-port)
+  @media only screen and (max-width: 56.25em), only screen and {
+    hover: none;
+  }
+   {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &__side {
       height: auto;
       position: relative;
+      -webkit-box-shadow: none;
       box-shadow: none;
 
       &--back {
+        -webkit-transform: rotateY(0);
         transform: rotateY(0);
+        -webkit-clip-path: polygon(0% 15%, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(0% 15%, 100% 0, 100% 100%, 0% 100%);
       }
     }
 
     &:hover &__side--front {
+      -webkit-transform: rotateY(0);
       transform: rotateY(0);
     }
 
@@ -203,6 +334,8 @@
       position: relative;
       top: 0%;
       left: 0%;
+      -webkit-transform: translate(0);
+      -ms-transform: translate(0);
       transform: translate(0);
       width: 100%;
       padding: 7rem 4rem 4rem 4rem;

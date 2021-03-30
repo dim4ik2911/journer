@@ -8,19 +8,28 @@
   z-index: 15;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
   &__content {
     @include absCenter;
 
     width: 70%;
     background-color: $color-white;
+    -webkit-box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
     border-radius: 3px;
     display: table;
     overflow: hidden;
     opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0.25);
+    -ms-transform: translate(-50%, -50%) scale(0.25);
     transform: translate(-50%, -50%) scale(0.25);
+    -webkit-transition: all 0.4s 0.2s;
+    -o-transition: all 0.4s 0.2s;
     transition: all 0.4s 0.2s;
 
     @include respond(tab-land) {
@@ -61,9 +70,21 @@
     font-size: 1.6rem;
     margin-bottom: 4rem;
 
+    -webkit-column-count: 2;
+
+    -moz-column-count: 2;
+
     column-count: 2;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
     column-gap: 3rem;
+    -webkit-column-rule: 1px solid $color-grey-light-2;
+    -moz-column-rule: 1px solid $color-grey-light-2;
     column-rule: 1px solid $color-grey-light-2;
+
+    -webkit-hyphens: auto;
+
+    -ms-hyphens: auto;
 
     hyphens: auto;
   }
@@ -75,6 +96,8 @@
 
   &:target &__content {
     opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1);
   }
 
@@ -88,6 +111,8 @@
       font-size: 3rem;
       text-decoration: none;
       display: inline-block;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
       transition: all 0.2s;
     }
 

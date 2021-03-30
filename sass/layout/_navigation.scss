@@ -12,6 +12,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 10;
+    -webkit-box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
@@ -34,12 +35,21 @@
     position: fixed;
     top: 6.5rem;
     right: 6.5rem;
+    background-image: -o-radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
     background-image: radial-gradient(
       $color-primary-light,
       $color-primary-dark
     );
     z-index: 5;
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: -webkit-transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    -o-transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
     transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1),
+      -webkit-transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 
     @include respond(tab-port) {
       top: 4.5rem;
@@ -60,6 +70,8 @@
     left: 0;
     z-index: 8;
     opacity: 0;
+    -webkit-transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    -o-transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
 
@@ -67,6 +79,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
@@ -87,6 +101,12 @@
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
+      background-image: -o-linear-gradient(
+        330deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
       background-image: linear-gradient(
         120deg,
         transparent 0%,
@@ -94,6 +114,8 @@
         $color-white 50%
       );
       background-size: 220%;
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
       transition: all 0.4s;
 
       span {
@@ -106,12 +128,16 @@
     &:active {
       background-position: 100%;
       color: $color-primary;
+      -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
       transform: translateX(1rem);
     }
   }
 
   //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
+    -webkit-transform: scale(80);
+    -ms-transform: scale(80);
     transform: scale(80);
   }
 
@@ -139,6 +165,8 @@
       content: "";
       position: absolute;
       left: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
       transition: all 0.2s;
     }
 
@@ -164,11 +192,15 @@
 
   &__checkbox:checked + &__button &__icon::before {
     top: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
     transform: rotate(135deg);
   }
 
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
     transform: rotate(-135deg);
   }
 }

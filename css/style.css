@@ -264,26 +264,6 @@ body {
   .btn--orange::after {
     background-color: #fff; }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 3rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s; }
-
-.btn--animated {
-  -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards; }
-
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   color: #fbca47;
@@ -358,17 +338,9 @@ body {
           -ms-transform: scale(1.1);
           transform: scale(1.1); } }
     .composition__photo:hover {
-      outline: 1.5rem solid #fbca47;
       -webkit-transform: scale(1.05) translateY(-0.5rem);
       -ms-transform: scale(1.05) translateY(-0.5rem);
-      transform: scale(1.05) translateY(-0.5rem);
-      -webkit-box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.5);
-      box-shadow: 0 2.5rem 6rem rgba(0, 0, 0, 0.5);
-      z-index: 2; }
-  .composition:hover .composition__photo:not(:hover) {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95); }
+      transform: scale(1.05) translateY(-0.5rem); }
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -519,7 +491,7 @@ body {
   .cards__price-value {
     font-size: 6rem;
     font-weight: 100; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .cards {
       height: auto;
       border-radius: 3px;

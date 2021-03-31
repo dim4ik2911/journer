@@ -32,6 +32,7 @@
         transform: scale(1.2);
       }
     }
+
     &--p2 {
       right: 0;
       top: 2rem;
@@ -58,19 +59,9 @@
     }
 
     &:hover {
-      outline: 1.5rem solid $color-primary;
       -webkit-transform: scale(1.05) translateY(-0.5rem);
       -ms-transform: scale(1.05) translateY(-0.5rem);
       transform: scale(1.05) translateY(-0.5rem);
-      -webkit-box-shadow: 0 2.5rem 6rem rgba($color-black, 0.5);
-      box-shadow: 0 2.5rem 6rem rgba($color-black, 0.5);
-      z-index: 2;
     }
-  }
-
-  &:hover &__photo:not(:hover) {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
   }
 }

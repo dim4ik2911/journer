@@ -315,7 +315,7 @@ body {
         .composition__photo--p2 {
           top: 0; } }
     .composition__photo--p3 {
-      left: 20%;
+      left: 10rem;
       top: 10rem; }
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
